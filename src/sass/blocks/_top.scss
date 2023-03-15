@@ -1,0 +1,32 @@
+.top {
+    @include margin-top(94,60);
+    padding: 50px 0;
+    background-color: $bgDark;
+    &__breadcrumbs {
+        margin-top: 20px;
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center; 
+    &__item-sep {
+        width: 14px;
+        height: 1px;
+        background-color: $textLight;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    &__item:last-child {
+        .breadcrumbs__link {
+            color: $textMain;
+        }
+    }
+    &__link {
+        @include font-size(14,12);
+        font-weight: 400;
+        line-height: 160%;
+        color: $textLight;
+    }
+}
+

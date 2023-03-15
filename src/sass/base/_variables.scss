@@ -1,0 +1,18 @@
+// Colors
+$accent: #5C8EE6;
+$accentDark: #3A71D1;
+$textMain: #292D33;
+$textLight: #828A99;
+$bg: #FAFBFC;
+$bgDark: #F0F2F5;
+$sep: #EBEBF0;
+$sepOpacity: rgba(235, 235, 240, 0.2);
+$shadow: #5858583b;
+
+
+
+
+// Container
+$containerWidth: 1440;
+$currentWidth: 1680;
+$mainWidth: calc(#{$currentWidth - 320});

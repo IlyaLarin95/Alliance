@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Oswald&display=swap');
+
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/mixins';
+
+@import 'blocks/global';
+@import 'blocks/hamburger';
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/top';
+
+// Main
+@import 'blocks/main/hero';
+@import 'blocks/main/scheme';
+@import 'blocks/main/manufacturing';
+@import 'blocks/main/trademark';
+@import 'blocks/main/attitude';
+@import 'blocks/main/brands';
+@import 'blocks/main/blog';
+@import 'blocks/main/application';
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: $bg;
+}
+
+.container {
+    @include container($containerWidth);
+}
+
+.container-fluid {
+    padding: 0;
+
+    &_l {
+        padding-left: max(15px, calc(50% - #{$containerWidth}px / 2));
+    }
+
+    &_r {
+        padding-right: max(15px, calc(50% - #{$containerWidth}px / 2));
+    }
+}
+
+@import 'base/media';

@@ -1,0 +1,39 @@
+.scheme {
+    @include padding-top(150, 100);
+    &__items {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        justify-content: center;
+        gap: 15px 30px;
+    }
+    &__item {
+        min-height: 250px;
+    }
+    &__item-num {
+        font-family: 'Oswald';
+        letter-spacing: -2px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 120%;
+        color: $accent;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 70px;
+            width: 77%;
+            height: 1px;
+            background-color: $sep;
+        }
+    }
+    &__item-title {
+        @include margin-top(30,10);
+    }
+    &__item-btn {
+        margin-top: 25px;
+    }
+}

@@ -1,0 +1,24 @@
+.attitude {
+    &__main {
+        @include gap(50,25);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__img {
+        @include min-height(660,290);
+        width: 45%;
+        max-height: 840px;
+        flex: 0 1 auto;
+        object-fit: cover;
+    }
+    &__content {
+        flex: 0 1 720px;
+    }
+    &__text {
+        @include margin-top(20,10);
+    }
+    &__btn {
+        @include margin-top(30,20);
+    }
+}

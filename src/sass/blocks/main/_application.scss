@@ -1,0 +1,66 @@
+.application {
+    padding-bottom: 0;
+
+    &__wrapper {
+        @include padding-top(100, 50);
+        @include padding-bottom(100, 50);
+        background: $bgDark;
+        position: relative;
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: 0;
+        left: -5%;
+        width: 720px;
+        height: 626px;
+        object-fit: contain;
+    }
+
+    &__main {
+        max-width: 840px;
+        margin-left: auto;
+    }
+
+    .title {
+        &::before {
+            display: none;
+        }
+
+        padding-top: 0;
+    }
+
+    &__text {
+        @include margin-top(20, 10);
+        max-width: 650px;
+    }
+
+    &__form {
+        @include margin-top(40, 30);
+    }
+
+    &__form-inputs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    &__input {
+        @include font-size(16, 14);
+        height: 65px;
+        width: 405px;
+        padding: 20px 10px 20px 30px;
+        border: 1px solid #E4E4EB;
+        background-color: transparent;
+        font-weight: 400;
+        line-height: 160%;
+        color: $textLight;
+        outline: none;
+
+        &:focus {
+            border: 1px solid #5C8EE6;
+        }
+    }
+}

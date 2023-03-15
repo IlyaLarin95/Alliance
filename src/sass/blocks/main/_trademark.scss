@@ -1,0 +1,45 @@
+.trademark {
+    &__items {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 720px));
+        justify-content: center;
+    }
+    &__item {
+        @include padding-top(50,30);
+        @include padding-bottom(70,30);
+        @include padding-right(50,30);
+        @include padding-left(70,30);
+        @include gap(50,30);
+        border: 1px solid $sep;
+        display: flex;
+        align-items: flex-start;
+        &:hover {
+            border: 1px solid $accent;
+            .trademark__item-title {
+                color: $accent;
+            }
+            svg {
+                path {
+                    fill: $accent;
+                    transition: .15s linear all;
+                }
+            }
+        }
+    }
+    &__item-img {
+        @include width(180,100);
+        @include height(180,100);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 auto;
+        svg {
+            display: flex;
+            flex: 0 0 auto;
+        }
+    }
+    &__item-content {
+        flex-wrap: wrap;
+    }
+}

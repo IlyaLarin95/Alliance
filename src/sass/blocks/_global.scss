@@ -1,0 +1,256 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+section {
+    @include padding-top(75, 50);
+    @include padding-bottom(75, 50);
+}
+
+
+.title {
+    @include padding-top(30, 20);
+    @include font-size(56, 32);
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: $textMain;
+    letter-spacing: -2px;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 2px;
+        background-color: $accent;
+    }
+}
+
+.main-title {
+    font-weight: 400;
+    @include font-size(80, 46);
+    line-height: 120%;
+    color: #292D33;
+    text-transform: uppercase
+}
+
+h3 {
+    @include font-size(28, 20);
+    @include line-height(38, 22);
+    font-weight: 400;
+    color: $textMain;
+}
+
+p {
+    @include font-size(16, 14);
+    @include line-height(26, 22);
+    margin-top: 10px;
+    font-weight: 400;
+    color: $textLight;
+}
+
+.btn {
+    @include padding-top(25, 20);
+    @include padding-bottom(25, 20);
+    @include font-size(16, 14);
+    display: inline-block;
+    padding-right: 60px;
+    padding-left: 60px;
+    width: fit-content;
+    border: none;
+    font-weight: 600;
+    line-height: 160%;
+    color: #FFFFFF;
+    background: $accent;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s ease all;
+
+    &:hover {
+        transition: .3s ease all;
+        background: $accentDark;
+    }
+}
+
+.btn-nfill {
+    display: inline-block;
+    padding-left: 60px;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    color: $accent;
+    position: relative;
+
+    &:hover {
+        color: $accentDark;
+        transition: .3s ease all;
+
+        &:before {
+            transform: translate(10px, -50%);
+            background-color: $accentDark;
+            transition: .3s ease all;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0px;
+        width: 40px;
+        height: 1px;
+        background-color: $accent;
+        transition: .3s ease all;
+    }
+}
+
+.address-item {
+    display: flex;
+    position: relative;
+    padding-left: 28px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: $textMain;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background: url('../icons/map.svg') no-repeat center/cover;
+        width: 12px;
+        height: 17px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0px;
+    }
+}
+
+.email-item {
+    display: flex;
+    position: relative;
+    padding-left: 28px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: $textMain;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background: url('../icons/email.svg') no-repeat center/cover;
+        width: 16px;
+        height: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0px;
+    }
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.advanteges {
+    @include margin-top(100, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #FFFFFF;
+
+    &__item {
+        @include padding-top(30, 20);
+        @include padding-bottom(30, 20);
+        @include padding-right(50, 30);
+        @include padding-left(50, 30);
+        @include width(288, 250);
+        @include height(170, 140);
+        max-width: 288px;
+        border: 1px solid $sepOpacity;
+    }
+
+    &__item-text {
+        @include font-size(16, 14);
+        margin-top: 20px;
+        font-weight: 400;
+        line-height: 160%;
+    }
+}
+
+.form {
+    &__input {
+        @include font-size(16, 14);
+        height: 65px;
+        width: 405px;
+        padding: 20px 10px 20px 30px;
+        border: 1px solid #E4E4EB;
+        background-color: transparent;
+        font-weight: 400;
+        line-height: 160%;
+        color: $textLight;
+        outline: none;
+
+        &:focus {
+            border: 1px solid #5C8EE6;
+        }
+    }
+
+    &__info {
+        @include gap(40, 30);
+        @include margin-top(30, 15);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__btn {
+        padding: 20px 50px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__note {
+        display: inline;
+        padding-left: 24px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+        color: $textLight;
+        max-width: 400px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: url('../icons/ok.svg') no-repeat center/cover;
+            width: 14px;
+            height: 14px;
+            top: 3px;
+            left: 0px;
+        }
+    }
+}

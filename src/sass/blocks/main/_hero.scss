@@ -1,0 +1,54 @@
+.hero {
+    @include padding-top(200, 120);
+    padding-bottom: 0;
+    min-height: 970px;
+    background: url('../img/bg-main.jpg') no-repeat 50%/cover;
+    background-attachment: fixed;
+
+    &__main {
+        @include max-width(1000, 600);
+    }
+
+    &__title {
+        @include font-size(80, 48);
+        color: #FFFFFF;
+        text-transform: none;
+    }
+
+    &__text {
+        @include font-size(16, 14);
+        max-width: 720px;
+        margin-top: 20px;
+        font-weight: 400;
+        line-height: 160%;
+        color: #FFFFFF;
+    }
+
+    &__btn {
+        margin-top: 50px;
+        position: relative;
+        transition: .3s ease all;
+    }
+}
+
+@keyframes btn-effects-1 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes btn-effects-2 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
